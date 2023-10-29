@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity"
+    >
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+              <androidx.constraintlayout.widget.ConstraintLayout
+                  android:id="@+id/ConstraintLayout2"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+                     <ImageView
+                         android:id="@+id/main_deleteAll"
+                         android:layout_width="40dp"
+                         android:layout_height="40dp"
+                         app:layout_constraintBaseline_toTopOf="parent"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         android:src="@drawable/baseline_delete_24"
+                         />
+                     <TextView
+                         android:id="@+id/my_cart_totalAmount"
+                         android:layout_width="match_parent"
+
+                         android:layout_height="wrap_content"
+
+                         android:fontFamily="@font/amita"
+                         android:gravity="center"
+                         android:text="List Product"
+                         android:textColor="#C69292"
+                         android:textSize="26sp"
+                         android:textStyle="bold"
+
+
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toTopOf="parent"
+                         />
+
+                     <TextView
+                         android:id="@+id/textView10"
+                         android:layout_width="300dp"
+                         android:layout_height="1dp"
+                         android:background="@color/black"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toBottomOf="@+id/my_cart_totalAmount" />
+                     <Button
+                         android:id="@+id/main_btnCreate"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintTop_toBottomOf="@+id/textView10"
+                         android:backgroundTint="#4CAF50"
+                         android:text="Add New"
+                         />
+
+                     <androidx.recyclerview.widget.RecyclerView
+                         android:id="@+id/main_RecyclerView"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintTop_toBottomOf="@+id/main_btnCreate"
+                         android:layout_marginTop="10dp"
+                         >
+                     </androidx.recyclerview.widget.RecyclerView>
+
+
+              </androidx.constraintlayout.widget.ConstraintLayout>
+       </ScrollView>
+
+
+</FrameLayout>
